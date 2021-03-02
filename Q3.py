@@ -5,7 +5,7 @@ def maxProduct(nums):
         xIndex = nums.index(x)
         #當前數字不乘自己 所以索引+1
         for y in range(xIndex+1, len(nums), +1):
-            if x*nums[y] > max:
+            if x*nums[y] > max or max == 0 :
                 max = x*nums[y]
     else:
         print(max)
